@@ -229,7 +229,7 @@ header .header-nav img {
   min-height: 550px;
   display: flex;
   justify-content: space-between;
-  padding: 45px 20px;
+  padding: 20px 20px;
   background-color: #22262e;
   border-bottom: 10px solid #303d4f;
 }
@@ -262,8 +262,17 @@ header .header-nav img {
   padding: 5px;
   background-color: #323438;
 }
+.middle-content .right-content li li {
+  margin-left: 3rem;
+}
+.middle-content .right-content li li::before {
+  content: "· ";
+}
 .middle-content .right-content li:nth-child(even) {
   background-color: #4e525a;
+}
+.middle-content .right-content .inner-list li {
+  background-color: transparent;
 }
 footer {
   width: 100%;
