@@ -140,6 +140,22 @@ table {
   justify-content: space-between;
   align-items: center;
 }
+.listFormat li {
+  padding: 5px;
+  background-color: #323438;
+}
+.listFormat li li {
+  margin-left: 3rem;
+}
+.listFormat li li::before {
+  content: "· ";
+}
+.listFormat li:nth-child(even) {
+  background-color: #4e525a;
+}
+.listFormat .inner-list li {
+  background-color: transparent;
+}
 html,
 body {
   height: 100%;
@@ -181,6 +197,10 @@ a {
   align-items: center;
   background-color: #15181f;
 }
+.container header p {
+  font-size: 1.4rem;
+  padding: 10px 0;
+}
 .container header a {
   font-size: 1.4rem;
 }
@@ -208,6 +228,12 @@ a {
   }
   .container header .header-nav {
     margin-top: 10px;
+  }
+  .container header .left-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 .container .top-content {
@@ -268,8 +294,17 @@ a {
   padding: 5px;
   background-color: #323438;
 }
+.container .middle-content .left-content li li {
+  margin-left: 3rem;
+}
+.container .middle-content .left-content li li::before {
+  content: "· ";
+}
 .container .middle-content .left-content li:nth-child(even) {
   background-color: #4e525a;
+}
+.container .middle-content .left-content .inner-list li {
+  background-color: transparent;
 }
 .container .middle-content .right-content {
   min-height: 550px;

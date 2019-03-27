@@ -76,6 +76,26 @@ table {
 	justify-content: space-between;
 	align-items: center;
 }
+.listFormat {
+	li {
+		padding: 5px;
+		background-color: @altBGColor;
+		li {
+			margin-left: 3rem;
+			&::before {
+				content: "· ";
+			}
+		}
+	}
+	li:nth-child(even) {
+		background-color: @altSecondBGColor;
+	}
+	.inner-list {
+		li {
+			background-color: transparent;
+		}
+	}
+}
 
 
 html, body {
@@ -119,6 +139,10 @@ a {
 		color: @titleTextColor;
 		.flexBetweenCenter();
 		background-color: @headerFooterColor;
+		p {
+			font-size: 1.4rem;
+			padding: 10px 0;
+		}
 		a {
 			font-size: 1.4rem;
 		}
@@ -142,6 +166,10 @@ a {
 			align-items: center;
 			.header-nav {
 				margin-top: 10px;
+			}
+			.left-content {
+				.flexCenter();
+				flex-direction: column;
 			}
 		}
 	}
@@ -194,13 +222,7 @@ a {
 			h1 {
 				padding: 0 0 10px;
 			}
-			li {
-				padding: 5px;
-				background-color: @altBGColor;
-			}
-			li:nth-child(even) {
-				background-color: @altSecondBGColor;
-			}
+			.listFormat();
 		}
 		.right-content {
 			min-height: 550px;
@@ -211,24 +233,7 @@ a {
 			h1 {
 				padding: 0 0 10px;
 			}
-			li {
-				padding: 5px;
-				background-color: @altBGColor;
-				li {
-					margin-left: 3rem;
-					&::before {
-						content: "· ";
-					}
-				}
-			}
-			li:nth-child(even) {
-				background-color: @altSecondBGColor;
-			}
-			.inner-list {
-				li {
-					background-color: transparent;
-				}
-			}
+			.listFormat();
 		}
 		border-bottom: 10px solid @backgroundColor;
 		@media (max-width: 500px) {
