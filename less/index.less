@@ -53,8 +53,161 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
-	color: red;
+//Vars
+@bodyFont: 'Encode Sans Semi Condensed', sans-serif;
+@styledFont: 'Encode Sans Expanded', sans-serif;
+@mainTextColor: #c4c4c4;
+@altTextColor: #9a9b99;
+@titleTextColor: #e8e8e8;
+@headerFooterColor: #15181f;
+@mainBGColor: #22262e;
+@altBGColor: #323438;
+@altSecondBGColor: #4e525a;
+@backgroundColor: #303d4f;
+
+//Mixins
+.flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flexBetweenCenter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
+
+html, body {
+	height: 100%;
+	font-size: 62.5%;
+	font-family: @bodyFont;
+	background-color: @backgroundColor;
+}
+
+p {
+	font-family: @bodyFont;
+	font-size: 1.8rem;
+	color: @mainTextColor;
+}
+
+li {
+	font-family: @bodyFont;
+	font-size: 1.8rem;
+	color: @mainTextColor;
+}
+
+h1 {
+	font-size: 2.8rem;
+	font-family: @styledFont;
+	font-weight: 800;
+	color: @titleTextColor;
+}
+
+a {
+	font-family: @styledFont;
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1024px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header {
+	padding: 10px 15px 15px;
+	width: 100%;
+	color: @titleTextColor;
+	.flexBetweenCenter();
+	background-color: @headerFooterColor;
+	a {
+		font-size: 1.4rem;
+	}
+	.header-nav {
+		.flexCenter();
+		a {
+			margin: 0 3rem;
+			color: @altTextColor;
+			transition-duration: 200ms;
+			&:hover {
+				color: @titleTextColor;
+			}
+		}
+		img {
+			width: 3.6rem;
+			height: auto;
+		}
+	}
+}
+
+.top-content {
+	display: flex;
+	justify-content: space-between;
+	padding: 45px 20px;
+	background-color: @mainBGColor;
+	.left-content {
+		.flexCenter();
+		width: 35%;
+		height: auto;
+	}
+	.right-content {
+		display: flex;
+		flex-direction: column;
+		padding: 15px 0;
+		width: 45%;
+		.paragraph {
+			margin: 20px 0;
+			text-align: right;
+		}
+	}
+	border-bottom: 10px solid @backgroundColor;
+}
+
+.middle-content {
+	min-height: 550px;
+	display: flex;
+	justify-content: space-between;
+	padding: 45px 20px;
+	background-color: @mainBGColor;
+	.left-content {
+		display: flex;
+		flex-direction: column;
+		padding: 15px 0;
+		width: 45%;
+		h1 {
+			padding: 0 0 10px;
+		}
+		li {
+			padding: 5px;
+			background-color: @altBGColor;
+		}
+		li:nth-child(even) {
+			background-color: @altSecondBGColor;
+		}
+	}
+	.right-content {
+		display: flex;
+		flex-direction: column;
+		padding: 15px 0;
+		width: 45%;
+		h1 {
+			padding: 0 0 10px;
+		}
+		li {
+			padding: 5px;
+			background-color: @altBGColor;
+		}
+		li:nth-child(even) {
+			background-color: @altSecondBGColor;
+		}
+	}
+	border-bottom: 10px solid @backgroundColor;
+}
+
+footer {
+	width: 100%;
+	.flexCenter();
+	padding: 10px 0;
+	background-color: @headerFooterColor;
+}
