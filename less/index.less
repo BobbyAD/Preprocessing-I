@@ -113,141 +113,140 @@ a {
 	max-width: 1024px;
 	width: 100%;
 	margin: 0 auto;
-}
-
-header {
-	padding: 10px 15px 15px;
-	width: 100%;
-	color: @titleTextColor;
-	.flexBetweenCenter();
-	background-color: @headerFooterColor;
-	a {
-		font-size: 1.4rem;
-	}
-	.header-nav {
-		.flexCenter();
+	header {
+		padding: 10px 15px 15px;
+		width: 100%;
+		color: @titleTextColor;
+		.flexBetweenCenter();
+		background-color: @headerFooterColor;
 		a {
-			margin: 0 3rem;
-			color: @altTextColor;
-			transition-duration: 200ms;
-			&:hover {
-				color: @titleTextColor;
+			font-size: 1.4rem;
+		}
+		.header-nav {
+			.flexCenter();
+			a {
+				margin: 0 3rem;
+				color: @altTextColor;
+				transition-duration: 200ms;
+				&:hover {
+					color: @titleTextColor;
+				}
+			}
+			img {
+				width: 3.6rem;
+				height: auto;
 			}
 		}
-		img {
-			width: 3.6rem;
+		@media (max-width: 800px) {
+			flex-direction: column;
+			align-items: center;
+			.header-nav {
+				margin-top: 10px;
+			}
+		}
+	}
+	
+	.top-content {
+		display: flex;
+		justify-content: space-between;
+		padding: 45px 20px;
+		background-color: @mainBGColor;
+		.left-content {
+			.flexCenter();
+			width: 35%;
 			height: auto;
 		}
-	}
-	@media (max-width: 800px) {
-		flex-direction: column;
-		align-items: center;
-		.header-nav {
-			margin-top: 10px;
+		.right-content {
+			display: flex;
+			flex-direction: column;
+			padding: 15px 0;
+			width: 45%;
+			.paragraph {
+				margin: 20px 0;
+				text-align: right;
+			}
+		}
+		border-bottom: 10px solid @backgroundColor;
+		@media (max-width: 800px) {
+			flex-direction: column;
+			align-items: center;
+			.left-content {
+				width: 90%;
+			}
+			.right-content {
+				width: 60%;
+				align-self: flex-end;
+				margin-right: 5%;
+			}
 		}
 	}
-}
-
-.top-content {
-	display: flex;
-	justify-content: space-between;
-	padding: 45px 20px;
-	background-color: @mainBGColor;
-	.left-content {
-		.flexCenter();
-		width: 35%;
-		height: auto;
-	}
-	.right-content {
+	
+	.middle-content {
 		display: flex;
-		flex-direction: column;
-		padding: 15px 0;
-		width: 45%;
-		.paragraph {
-			margin: 20px 0;
-			text-align: right;
-		}
-	}
-	border-bottom: 10px solid @backgroundColor;
-	@media (max-width: 800px) {
-		flex-direction: column;
-		align-items: center;
+		justify-content: space-between;
+		padding: 20px 20px;
+		background-color: @mainBGColor;
 		.left-content {
-			width: 90%;
+			display: flex;
+			flex-direction: column;
+			padding: 15px 0;
+			width: 45%;
+			h1 {
+				padding: 0 0 10px;
+			}
+			li {
+				padding: 5px;
+				background-color: @altBGColor;
+			}
+			li:nth-child(even) {
+				background-color: @altSecondBGColor;
+			}
 		}
 		.right-content {
-			width: 60%;
-			align-self: flex-end;
-			margin-right: 5%;
-		}
-	}
-}
-
-.middle-content {
-	display: flex;
-	justify-content: space-between;
-	padding: 20px 20px;
-	background-color: @mainBGColor;
-	.left-content {
-		display: flex;
-		flex-direction: column;
-		padding: 15px 0;
-		width: 45%;
-		h1 {
-			padding: 0 0 10px;
-		}
-		li {
-			padding: 5px;
-			background-color: @altBGColor;
-		}
-		li:nth-child(even) {
-			background-color: @altSecondBGColor;
-		}
-	}
-	.right-content {
-		min-height: 550px;
-		display: flex;
-		flex-direction: column;
-		padding: 15px 0;
-		width: 45%;
-		h1 {
-			padding: 0 0 10px;
-		}
-		li {
-			padding: 5px;
-			background-color: @altBGColor;
+			min-height: 550px;
+			display: flex;
+			flex-direction: column;
+			padding: 15px 0;
+			width: 45%;
+			h1 {
+				padding: 0 0 10px;
+			}
 			li {
-				margin-left: 3rem;
-				&::before {
-					content: "· ";
+				padding: 5px;
+				background-color: @altBGColor;
+				li {
+					margin-left: 3rem;
+					&::before {
+						content: "· ";
+					}
+				}
+			}
+			li:nth-child(even) {
+				background-color: @altSecondBGColor;
+			}
+			.inner-list {
+				li {
+					background-color: transparent;
 				}
 			}
 		}
-		li:nth-child(even) {
-			background-color: @altSecondBGColor;
-		}
-		.inner-list {
-			li {
-				background-color: transparent;
+		border-bottom: 10px solid @backgroundColor;
+		@media (max-width: 500px) {
+			flex-direction: column;
+			align-content: center;
+			.left-content {
+				width: 90%;
+			}
+			.right-content {
+				width: 90%;
 			}
 		}
 	}
-	border-bottom: 10px solid @backgroundColor;
-	@media (max-width: 500px) {
-		flex-direction: column;
-		align-content: center;
-		.left-content {
-			width: 90%;
-		}
-		.right-content {
-			width: 90%;
-		}
+	
+	footer {
+		width: 100%;
+		.flexCenter();
+		padding: 10px 0;
+		background-color: @headerFooterColor;
 	}
-}
-
-footer {
-	width: 100%;
-	.flexCenter();
-	padding: 10px 0;
-	background-color: @headerFooterColor;
 }

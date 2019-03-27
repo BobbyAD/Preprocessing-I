@@ -172,7 +172,7 @@ a {
   width: 100%;
   margin: 0 auto;
 }
-header {
+.container header {
   padding: 10px 15px 15px;
   width: 100%;
   color: #e8e8e8;
@@ -181,135 +181,135 @@ header {
   align-items: center;
   background-color: #15181f;
 }
-header a {
+.container header a {
   font-size: 1.4rem;
 }
-header .header-nav {
+.container header .header-nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .header-nav a {
+.container header .header-nav a {
   margin: 0 3rem;
   color: #9a9b99;
   transition-duration: 200ms;
 }
-header .header-nav a:hover {
+.container header .header-nav a:hover {
   color: #e8e8e8;
 }
-header .header-nav img {
+.container header .header-nav img {
   width: 3.6rem;
   height: auto;
 }
 @media (max-width: 800px) {
-  header {
+  .container header {
     flex-direction: column;
     align-items: center;
   }
-  header .header-nav {
+  .container header .header-nav {
     margin-top: 10px;
   }
 }
-.top-content {
+.container .top-content {
   display: flex;
   justify-content: space-between;
   padding: 45px 20px;
   background-color: #22262e;
   border-bottom: 10px solid #303d4f;
 }
-.top-content .left-content {
+.container .top-content .left-content {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 35%;
   height: auto;
 }
-.top-content .right-content {
+.container .top-content .right-content {
   display: flex;
   flex-direction: column;
   padding: 15px 0;
   width: 45%;
 }
-.top-content .right-content .paragraph {
+.container .top-content .right-content .paragraph {
   margin: 20px 0;
   text-align: right;
 }
 @media (max-width: 800px) {
-  .top-content {
+  .container .top-content {
     flex-direction: column;
     align-items: center;
   }
-  .top-content .left-content {
+  .container .top-content .left-content {
     width: 90%;
   }
-  .top-content .right-content {
+  .container .top-content .right-content {
     width: 60%;
     align-self: flex-end;
     margin-right: 5%;
   }
 }
-.middle-content {
+.container .middle-content {
   display: flex;
   justify-content: space-between;
   padding: 20px 20px;
   background-color: #22262e;
   border-bottom: 10px solid #303d4f;
 }
-.middle-content .left-content {
+.container .middle-content .left-content {
   display: flex;
   flex-direction: column;
   padding: 15px 0;
   width: 45%;
 }
-.middle-content .left-content h1 {
+.container .middle-content .left-content h1 {
   padding: 0 0 10px;
 }
-.middle-content .left-content li {
+.container .middle-content .left-content li {
   padding: 5px;
   background-color: #323438;
 }
-.middle-content .left-content li:nth-child(even) {
+.container .middle-content .left-content li:nth-child(even) {
   background-color: #4e525a;
 }
-.middle-content .right-content {
+.container .middle-content .right-content {
   min-height: 550px;
   display: flex;
   flex-direction: column;
   padding: 15px 0;
   width: 45%;
 }
-.middle-content .right-content h1 {
+.container .middle-content .right-content h1 {
   padding: 0 0 10px;
 }
-.middle-content .right-content li {
+.container .middle-content .right-content li {
   padding: 5px;
   background-color: #323438;
 }
-.middle-content .right-content li li {
+.container .middle-content .right-content li li {
   margin-left: 3rem;
 }
-.middle-content .right-content li li::before {
+.container .middle-content .right-content li li::before {
   content: "· ";
 }
-.middle-content .right-content li:nth-child(even) {
+.container .middle-content .right-content li:nth-child(even) {
   background-color: #4e525a;
 }
-.middle-content .right-content .inner-list li {
+.container .middle-content .right-content .inner-list li {
   background-color: transparent;
 }
 @media (max-width: 500px) {
-  .middle-content {
+  .container .middle-content {
     flex-direction: column;
     align-content: center;
   }
-  .middle-content .left-content {
+  .container .middle-content .left-content {
     width: 90%;
   }
-  .middle-content .right-content {
+  .container .middle-content .right-content {
     width: 90%;
   }
 }
-footer {
+.container footer {
   width: 100%;
   display: flex;
   justify-content: center;
